@@ -22,7 +22,7 @@ javascript:(function(){
       //console.log(lpn);
       if((dlinks[i].id == 'contentMain-readNextEpisode' ) && (lpn == lp)){
         //alert(dlinks[i].href);
-        location.href = dlinks[i].href;
+        nextarticle = dlinks[i].href;
         break;
       }
     }
