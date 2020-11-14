@@ -1,5 +1,5 @@
 javascript:(function(){
-  if (!(/^https:\/\/kakuyomu.jp\/works\/\d+\/episodes\/\d+$/.test(location.href))){
+  if (!(/^https:\/\/kakuyomu.jp\/works\/\d+\/episodes\/.+$/.test(location.href))){
     var tc ='次';
     var dlinks = document.links;
     for (var i = dlinks.length-1; i >= 0; i--){
@@ -8,6 +8,7 @@ javascript:(function(){
          (dlinks[i].textContent.indexOf(tc)==0)){
         nextarticle = dlinks[i].href;
         break;
+      }
     }
     if(typeof nextarticle === 'undefined'){
       alert('同じドメインの「' + tc + '」で始まるリンクはありません。');
