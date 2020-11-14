@@ -1,21 +1,6 @@
 javascript:(function(){
-  if (!(/^https:\/\/kakuyomu.jp\/works\/\d+\/episodes\/.+$/.test(location.href))){
-    var tc ='次';
-    var dlinks = document.links;
-    for (var i = dlinks.length-1; i >= 0; i--){
-      if(('textContent' in dlinks[i] ) &&
-         (location.hostname == dlinks[i].hostname) &&
-         (dlinks[i].textContent.indexOf(tc)==0)){
-        nextarticle = dlinks[i].href;
-        break;
-      }
-    }
-    if(typeof nextarticle === 'undefined'){
-      alert('同じドメインの「' + tc + '」で始まるリンクはありません。');
-    }else{
-      location.href = nextarticle;
-    }
-  }else{
+  if (/^https:\/\/kakuyomu.jp\/works\/\d+\/episodes\/.+$/.test(location.href)){
+    //kakuyomu
     var lp = location.href.match(/^https:\/\/kakuyomu.jp\/works\/\d+\/episodes\//)[0];
     var dlinks = document.links;
     for (var i = dlinks.length-1; i >= 0; i--){
@@ -29,6 +14,24 @@ javascript:(function(){
     }
     if(typeof nextarticle === 'undefined'){
       alert('次のエピソードはありません。');
+    }else{
+      location.href = nextarticle;
+    }
+
+  }else{
+    //other
+    var tc ='次';
+    var dlinks = document.links;
+    for (var i = dlinks.length-1; i >= 0; i--){
+      if(('textContent' in dlinks[i] ) &&
+         (location.hostname == dlinks[i].hostname) &&
+         (dlinks[i].textContent.indexOf(tc)==0)){
+        nextarticle = dlinks[i].href;
+        break;
+      }
+    }
+    if(typeof nextarticle === 'undefined'){
+      alert('同じドメインの「' + tc + '」で始まるリンクはありません。');
     }else{
       location.href = nextarticle;
     }
