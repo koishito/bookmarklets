@@ -1,1 +1,3 @@
-javascript:document.querySelector("video[src]").requestPictureInPicture();
+javascript:(function(){
+  document.querySelector("video[src]").requestPictureInPicture();
+})();
