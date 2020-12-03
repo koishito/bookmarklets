@@ -10,7 +10,7 @@ javascript:(function(){
       d=document.createElement("button");
       d.type="button";
       d.innerHTML=e;
-      d.style.cssText="margin:4px;";
+      d.style.cssText="margin:4px 20px;";
       d.value=e;
       d.onclick=c;
       a.appendChild(d);
