@@ -6,7 +6,7 @@ javascript:(function(){
     a.onclick=function(){a.parentNode.removeChild(a);};
     z=[-60,-30,-10,-5,5,10,30,60];
     for(f=0;f<z.length;f++){
-      e=z[f].toFixed(2);
+      e=z[f];
       d=document.createElement("button");
       d.type="button";
       d.innerHTML=e;
@@ -18,13 +18,15 @@ javascript:(function(){
     document.body.appendChild(a);
     function c(g){
       g.stopPropagation();
-      b.pause();
-      var ct=b.currentTime + g.target.value;
+      var ps=!b.paused;
+      if (ps) {b.pause();}
+      console.log(b.currentTime,parseInt(g.target.value));
+      var ct=b.currentTime + parseInt(g.target.value);
       ct=ct<0?0:ct;
       ct=b.duration<ct?b.duration:ct;
       b.currentTime=ct;
-      b.play();
-      console.log(g.target.value);
+      if (ps) {b.play();}
+      console.log(g.target.value,ct);
     }
   }
 })();
