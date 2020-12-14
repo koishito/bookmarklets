@@ -1,6 +1,6 @@
 /* Run on a page that has "video[src]"/ */
 javascript:(function(){
-/* user processing */
+/* Start of user processing */
 var videosrc = document.querySelector("video[src]");
 if(videosrc != null){
   
@@ -19,23 +19,23 @@ if(videosrc != null){
   floatBox(array);
 
 };
-  /* user processing */
+  /* End of user processing */
 
 function userProcessing1(btn) {
   console.log(btn);
   btn.stopPropagation();
-  /* user processing */
+  /* Start of user processing */
   videosrc.playbackRate = btn.target.value;
-  /* user processing */
+  /* End of user processing */
   floatBoxButton(btn.target);
 }
 
 function userProcessing2(btn) {
   // console.log(btn);
   btn.stopPropagation();
-  /* user processing */
+  /* Start of user processing */
   videosrc.playbackRate = btn.target.value;
-  /* user processing */
+  /* End of user processing */
   floatBoxButton(btn.target);
 }
 
