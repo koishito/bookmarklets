@@ -24,5 +24,5 @@ javascript:(function(){
       /*console.log(g.target.value);*/
       a.click();
     }
-  }
+  };
 })();

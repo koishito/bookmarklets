@@ -1,7 +1,7 @@
 javascript:(function(){
   var b=document.querySelector("video[src]");
   if(b!=null){
-    var a=document.createElement("div"),f,d,e;
+    var a=document.createElement("div");
     a.style.cssText="visibility:visible;position:fixed;top:0px;left:0px;width:100%;padding:4px;background:teal;border:1px solid #aaa;text-align:center;z-index:19999;";
     a.onclick=function(){a.parentNode.removeChild(a);};
     a.id="mainiam";
