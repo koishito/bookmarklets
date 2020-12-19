@@ -1,4 +1,5 @@
-var e='1.00 倍速';
+javascript:(function(){
+  var e='1.00 倍速';
 floatBOX(e);
 function floatBOX(e){
   var a=document.createElement("div");
@@ -10,3 +11,4 @@ function floatBOX(e){
   setTimeout(closenode, 3000);
   function closenode(){a.parentNode.removeChild(a);}
 };
+})();
