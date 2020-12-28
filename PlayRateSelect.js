@@ -2,7 +2,7 @@ javascript:(function(){
   var b=document.querySelector("video[src]");
   if(b!=null){
     var a=document.createElement("div"),f,d,e;
-    a.style.cssText="position:fixed;top:150px;left:0;width:100%25;padding:10px;background:silver;border:1px solid #aaa;text-align:center;z-index:19999;";
+    a.style.cssText="opacity:0.8;position:fixed;top:150px;left:0;width:100%25;padding:10px;background:silver;border:1px solid #aaa;text-align:center;z-index:19999;";
     a.onclick=function(){a.parentNode.removeChild(a);};
     a.style.fontSize = "20px";
     a.appendChild(document.createTextNode("|"));
