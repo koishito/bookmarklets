@@ -13,7 +13,7 @@ javascript:(function(){
         var clientY = parseInt(sessionStorage.getItem('clientY'));
         targetElement = document.elementFromPoint(clientX, clientY);
         obj[event.key] = targetElement;
-        alert("setting key[  " + event.key + '  ] :\n ' + targetElement);
+        alert("setting key[  " + event.key + ' , ' + clientX + ' , ' + clientY + ' ] :\n ' + targetElement);
       }
     } else {
       var targetElement = obj[event.key];
