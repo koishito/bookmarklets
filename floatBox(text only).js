@@ -10,8 +10,11 @@ javascript:(function(){
     mbox.style.background = 'silver';
     mbox.style.border = '1px solid #aaa';
     mbox.style.fontSize = '80px';
-    var tnode = document.createTextNode(text);
-    mbox.appendChild(tnode);
+    text.split(/\\r\\n|\\r|\\n/).forEach(element => {
+      mbox.appendChild(document.createTextNode(element));
+      mbox.appendChild(document.createElement('br'));
+      mbox.appendChild(document.createElement('br'));
+    });
     document.body.appendChild(mbox);
 
     /* setTimeout(closenode, 3000);
