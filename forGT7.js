@@ -24,10 +24,10 @@ document.styleSheets[0].cssRules[33].style.width = '650px';
 */
 
 javascript:(function(){
-    if (location.href == `https://www.gran-turismo.com/jp/gt7/apex/`) {
+    if (location.href.startsWith(`https://www.gran-turismo.com/jp/gt7/apex/`)) {
         document.styleSheets[0].cssRules[33].style.width = '650px';
     }
-    if (location.href == `https://www.gran-turismo.com/jp/gt7/manual/`) {
+    if (location.href.startsWith(`https://www.gran-turismo.com/jp/gt7/manual/`)) {
         document.styleSheets[1].cssRules[33].style.width = '650px';
     }
 })();
