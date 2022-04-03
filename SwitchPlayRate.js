@@ -1,9 +1,9 @@
 javascript:(function(){
-  const a=[1, 1.25, 1.5, 2, 0.75, 1];
+  const a=[1, 1.25, 1.5, 2, 0.75];
   const b=document.querySelector("video[src]");
   const cr=b.playbackRate;
   if(b!=null){
-    d=a.reduce((p,c)=>(p==0)?c:((p==c)?0:p),cr);
+    d=a.concat(a[0]).reduce((p,c)=>(p==0)?c:((p==c)?0:p),cr);
     b.playbackRate=d;
     floatBOX(d.toFixed(2)+' 倍速');
   }
